@@ -1,0 +1,13 @@
+
+
+Version:	3.9
+CmdLine:	E:\lessons\AlcoPC\out\JavaFXApp.exe --l4j-debug
+WOW64:		yes
+Working dir:	E:\lessons\AlcoPC\out\.
+Bundled JRE:	C:\Program Files\Java\jre1.8.0_121\
+Check launcher:	C:\Program Files\Java\jre1.8.0_121\bin\javaw.exe (OK)
+Add classpath:	h2-1.4.195.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_121\bin\javaw.exe
+Launcher args:	-classpath "E:\lessons\AlcoPC\out\JavaFXApp.exe;h2-1.4.195.jar" sample.Main
+Args length:	75/32768 chars
+Exit code:	0
