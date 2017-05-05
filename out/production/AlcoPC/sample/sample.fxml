@@ -18,5 +18,6 @@
     </TableView>
     <Button fx:id="Save" layoutX="66.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="34.0" prefWidth="78.0" text="Сохранить" />
     <Button fx:id="Clear" layoutX="434.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnClear" prefHeight="34.0" prefWidth="78.0" text="Очистить" />
+    <Button fx:id="Update" layoutX="248.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnUpdDB" prefHeight="34.0" prefWidth="100.0" text="Обновить БД" />
   </children>
 </AnchorPane>

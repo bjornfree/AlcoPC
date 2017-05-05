@@ -1,10 +1,12 @@
 package sample.database;
+
 import java.sql.*;
 
 public class DBHelper {
     public static final String TABLE_NAME_MARK = "marks";
     public static final String TABLE_NAME_ALCOCODE = "alcocode";
     public static final String TABLE_NAME_QR = "qrcode";
+    public static final String TABLE_NAME_ALCOBASE = "alcobase";
 
 
     public static final String KEY_ID = "_id";
@@ -12,6 +14,9 @@ public class DBHelper {
     public static final String KEY_ALCOCODE = "alcocode";
     public static final String KEY_COUNTER = "counter";
     public static final String KEY_QR = "counter";
+    public static final String KEY_MAKER = "maker";
+    public static final String KEY_GROUP = "grup";
+    public static final String KEY_NAME = "names";
 
 
     private String root = System.getProperty("user.dir");
@@ -33,6 +38,7 @@ public class DBHelper {
                         + " " + KEY_ID + " integer primary key auto_increment,"
                         + " " + KEY_MARK + " VARCHAR(68) UNIQUE);");
             }
+
             try {
                 st.executeQuery("SELECT * FROM " + TABLE_NAME_ALCOCODE);
                 System.out.println("Таблица существует: " + TABLE_NAME_ALCOCODE);
@@ -43,6 +49,20 @@ public class DBHelper {
                         + " " + KEY_ID + " integer primary key auto_increment,"
                         + " " + KEY_ALCOCODE + " VARCHAR ,"
                         + " " + KEY_COUNTER + " integer" + ");");
+            }
+
+            try {
+                st.executeQuery("SELECT * FROM " + TABLE_NAME_ALCOBASE);
+                System.out.println("Таблица существует: " + TABLE_NAME_ALCOBASE);
+
+            } catch (SQLException exc) {
+                System.out.println("Таблица создана: " + TABLE_NAME_ALCOBASE);
+                st.execute("create table " + TABLE_NAME_ALCOBASE + " ("
+                        + " " + KEY_ID + " integer primary key auto_increment,"
+                        + " " + KEY_ALCOCODE + " VARCHAR ,"
+                        + " " + KEY_MAKER + " VARCHAR ,"
+                        + " " + KEY_GROUP + " VARCHAR ,"
+                        + " " + KEY_NAME + " VARCHAR " + ");");
             }
             try {
                 st.executeQuery("SELECT * FROM " + TABLE_NAME_QR);
@@ -55,12 +75,12 @@ public class DBHelper {
                         + " " + KEY_ID + " integer primary key auto_increment,"
                         + " " + KEY_QR + " VARCHAR UNIQUE);");
             }
+
             st.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 
     public void delete() throws SQLException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         try {
@@ -70,28 +90,57 @@ public class DBHelper {
             Statement st = null;
             st = conn.createStatement();
 
-            try{
+            try {
                 st.execute("DROP TABLE " + TABLE_NAME_ALCOCODE);
-                System.out.println("Таблица удалена: "+ TABLE_NAME_ALCOCODE );
-            } catch (Exception e){
-                System.out.println("Таблица не удалена: "+ TABLE_NAME_ALCOCODE);
+                System.out.println("Таблица удалена: " + TABLE_NAME_ALCOCODE);
+            } catch (Exception e) {
+                System.out.println("Таблица не удалена: " + TABLE_NAME_ALCOCODE);
             }
-            try{
+            try {
                 st.execute("DROP TABLE " + TABLE_NAME_MARK);
-                System.out.println("Таблица удалена: "+ TABLE_NAME_MARK);
-            }catch (Exception e){
-                System.out.println("Таблица не удалена: "+ TABLE_NAME_MARK);
+                System.out.println("Таблица удалена: " + TABLE_NAME_MARK);
+            } catch (Exception e) {
+                System.out.println("Таблица не удалена: " + TABLE_NAME_MARK);
             }
-            try{
+
+            try {
                 st.execute("DROP TABLE " + TABLE_NAME_QR);
-                System.out.println("Таблица удалена: "+ TABLE_NAME_QR);
+                System.out.println("Таблица удалена: " + TABLE_NAME_QR);
                 System.out.println("-----------------------------");
-            } catch (Exception e){
-                System.out.println("Таблица не удалена: "+ TABLE_NAME_QR);
+            } catch (Exception e) {
+                System.out.println("Таблица не удалена: " + TABLE_NAME_QR);
             }
             st.close();
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Операция delete не отработала");
+        }
+    }
+
+    public void rebase() {
+        try {
+            Class.forName("org.h2.Driver").newInstance();
+            Connection conn = DriverManager.getConnection("jdbc:h2:file:" + root + "/test",
+                    "sa", "");
+            Statement st = null;
+            st = conn.createStatement();
+
+            try {
+                st.execute("DROP TABLE " + TABLE_NAME_ALCOBASE);
+                System.out.println("Таблица удалена: " + TABLE_NAME_ALCOBASE);
+            } catch (Exception e) {
+                System.out.println("Таблица не удалена: " + TABLE_NAME_ALCOBASE);
+            }
+
+            st.execute("create table " + TABLE_NAME_ALCOBASE + " ("
+                    + " " + KEY_ID + " integer primary key auto_increment,"
+                    + " " + KEY_ALCOCODE + " VARCHAR ,"
+                    + " " + KEY_MAKER + " VARCHAR ,"
+                    + " " + KEY_GROUP + " VARCHAR ,"
+                    + " " + KEY_NAME + " VARCHAR " + ");");
+            System.out.println("Таблица создана: " + TABLE_NAME_ALCOBASE);
+
+        } catch (Exception e) {
+            System.out.println("Ошибка rebase : " + e);
         }
     }
 }
