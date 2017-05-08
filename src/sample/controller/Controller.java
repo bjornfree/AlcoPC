@@ -7,27 +7,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.VBox;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import sample.Data;
 import sample.database.DBHelper;
 import sample.database.UpdateAlcoDB;
 import sample.decoder.PDF417decoder;
 
-import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
+import java.io.FileWriter;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +30,7 @@ import java.util.Scanner;
 public class Controller {
     public Button Update;
     private String root = System.getProperty("user.dir");
-    private String myLogs;
     DBHelper dbHelper = new DBHelper();
-    private String LOG_TAG = myLogs;
     @FXML
     TextField enterCode = new TextField();
 
@@ -278,74 +269,79 @@ public class Controller {
 
     public void btnUpdDB(ActionEvent actionEvent) {
         UpdateAlcoDB updateAlcoDB = new UpdateAlcoDB();
-        String line;
-        String[] lines;
-        updateAlcoDB.download();
-        dbHelper.rebase();
-        try {
-            File file = new File(root, "/Alcoupdate.txt");
-            Scanner scan = new Scanner(file, "Cp1251");
-            while (scan.hasNext()) {
-                line = scan.nextLine();
-                lines = line.split(";");
-                try {
-                    Class.forName("org.h2.Driver").newInstance();
-                    Connection conn = DriverManager.getConnection("jdbc:h2:file:" + root + "/test",
-                            "sa", "");
-                    Statement st = null;
-                    st = conn.createStatement();
-                    st.executeUpdate("INSERT INTO " + DBHelper.TABLE_NAME_ALCOBASE + " (" + DBHelper.KEY_ALCOCODE + " , " + DBHelper.KEY_MAKER + " , " + DBHelper.KEY_GROUP + " , " + DBHelper.KEY_NAME + " , " + ") VALUES ('" + lines[0] + "','" + lines[1] + "','" + lines[2] + "','" + lines[3] + "'" + ");");
-                } catch (Exception e) {
-                    System.out.println("Ошибка " + e);
+        if (updateAlcoDB.download() == true) {
+            String line;
+            String[] lines;
+            dbHelper.rebase();
+            try {
+                File file = new File(root, "/Alcoupdate.txt");
+                Scanner scan = new Scanner(file, "Cp1251");
+                while (scan.hasNext()) {
+                    line = scan.nextLine();
+                    lines = line.split(";");
+                    try {
+                        Class.forName("org.h2.Driver").newInstance();
+                        Connection conn = DriverManager.getConnection("jdbc:h2:file:" + root + "/test",
+                                "sa", "");
+                        Statement st = null;
+                        st = conn.createStatement();
+                        st.executeUpdate("INSERT INTO " + DBHelper.TABLE_NAME_ALCOBASE + " (" + DBHelper.KEY_ALCOCODE + " , " + DBHelper.KEY_MAKER + " , " + DBHelper.KEY_GROUP + " , " + DBHelper.KEY_NAME + " , " + ") VALUES ('" + lines[0] + "','" + lines[1] + "','" + lines[2] + "','" + lines[3] + "'" + ");");
+                    } catch (Exception e) {
+                        System.out.println("Ошибка обновления алкобазы " + e);
+                    }
                 }
+            } catch (Exception e) {
+                System.out.println(e);
             }
-        } catch (Exception e) {
         }
     }
 
-    public void onClickTable(){
+    public void onClickTable() {
         alcoTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Data>() {
             @Override
             public void changed(ObservableValue<? extends Data> observable, Data oldValue, Data newValue) {
                 if (alcoTable.getSelectionModel().getSelectedItem() != null) {
                     String selectedItem = alcoTable.getSelectionModel().getSelectedItem().getAlcocode();
 
-                    Connection conn = null;
                     try {
+                        Connection conn = null;
                         conn = DriverManager.getConnection("jdbc:h2:file:" + root + "/test",
                                 "sa", "");
                         Statement st = null;
                         st = conn.createStatement();
                         ResultSet res = st.executeQuery("SELECT * FROM " + DBHelper.TABLE_NAME_ALCOBASE);
 
-                        if(res.next()){
+                        if (res.next()) {
                             do {
                                 String markContains = res.getString(DBHelper.KEY_ALCOCODE);
                                 if (markContains.equals(selectedItem)) {
 
-
-
                                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                                     alert.setTitle("Информация по алкокоду: " + res.getString(DBHelper.KEY_ALCOCODE));
                                     alert.setHeaderText(null);
-                                    alert.setContentText("Алкокод: " + res.getString(DBHelper.KEY_ALCOCODE) + "\n" + "Наименование: " + res.getString(DBHelper.KEY_NAME) + "\n" + "Производитель: " + res.getString(DBHelper.KEY_MAKER) + "\n" +"Группа: " + res.getString(DBHelper.KEY_GROUP));
+                                    alert.setContentText("Алкокод: " + res.getString(DBHelper.KEY_ALCOCODE) + "\n" + "Наименование: " + res.getString(DBHelper.KEY_NAME) + "\n" + "Производитель: " + res.getString(DBHelper.KEY_MAKER) + "\n" + "Группа: " + res.getString(DBHelper.KEY_GROUP));
                                     alert.showAndWait();
-
 
                                     System.out.println("Alcocod: " + res.getString(DBHelper.KEY_ALCOCODE));
                                     System.out.println("Производитель: " + res.getString(DBHelper.KEY_MAKER));
                                     System.out.println("Группа: " + res.getString(DBHelper.KEY_GROUP));
                                     System.out.println("Наименование: " + res.getString(DBHelper.KEY_NAME));
-                                }
-                            }while (res.next());
-                        }
 
+                                    alcoTable.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                                        @Override
+                                        public void handle(MouseEvent event) {
+                                            alcoTable.getSelectionModel().clearSelection();
+                                            event.consume();
+                                        }
+                                    });
+                                }
+                            } while (res.next());
+                        }
                     } catch (SQLException e) {
                         e.printStackTrace();
-                    };
+                    }
                 }
             }
         });
     }
-
 }

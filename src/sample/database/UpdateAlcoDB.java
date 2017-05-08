@@ -1,8 +1,8 @@
 package sample.database;
-import org.apache.commons.net.ftp.FTPClient;
-import sun.rmi.runtime.Log;
 
-import java.io.FileInputStream;
+import javafx.scene.control.Alert;
+import org.apache.commons.net.ftp.FTPClient;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ public class UpdateAlcoDB {
     private String root = System.getProperty("user.dir");
     FileOutputStream fos = null;
 
-    public void download() {
+    public boolean download() {
         try {
             mFTP.connect(ftpServer);
             mFTP.login(ftpUser, ftpPassword);
@@ -28,9 +28,19 @@ public class UpdateAlcoDB {
             fos.close();
             mFTP.logout();
             mFTP.disconnect();
+            return true;
+
         } catch (IOException e) {
-            System.out.println("Ошибка загрузки файла с фтп: ");
+            System.out.println("Ошибка загрузки файла с фтп: " + e);
             e.printStackTrace();
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Внимание!");
+            alert.setHeaderText(null);
+            alert.setContentText("Невозможно подключиться к ФТП");
+            alert.showAndWait();
+
+            return false;
         }
     }
 }

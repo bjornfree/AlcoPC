@@ -18,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AlcoPC$Main.coverage" NAME="Main Coverage Results" MODIFIED="1493800716220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/AlcoPC$Main.coverage" NAME="Main Coverage Results" MODIFIED="1494238180617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sample.controller.*</FILTER>
     </SUITE>
   </component>
@@ -80,34 +80,34 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="297" column="39" lean-forward="true" selection-start-line="297" selection-start-column="39" selection-end-line="297" selection-end-column="39" />
+            <state relative-caret-position="303">
+              <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#initialize#0;class#Controller#0" expanded="false" />
                 <element signature="method#initData#0;class#Controller#0" expanded="false" />
                 <element signature="method#todo#0;class#Controller#0" expanded="false" />
-                <element signature="class#2935:9030" expanded="false" />
                 <element signature="method#showCounter#0;class#Controller#0" expanded="false" />
                 <element signature="method#btnClear#0;class#Controller#0" expanded="false" />
                 <element signature="method#btnSave#0;class#Controller#0" expanded="false" />
+                <element signature="method#btnUpdDB#0;class#Controller#0" expanded="false" />
                 <element signature="method#onClickTable#0;class#Controller#0" expanded="false" />
-                <element signature="class#13090:15400" expanded="false" />
-                <marker date="1493990887949" expanded="true" signature="2084:2098" ph="SELECT * FRO... alcocode" />
-                <marker date="1493990887949" expanded="true" signature="3622:3636" ph="SELECT * FRO... marks" />
-                <marker date="1493990887949" expanded="true" signature="4687:4786" ph="INSERT INTO marks... " />
-                <marker date="1493990887949" expanded="true" signature="5163:5177" ph="SELECT * FRO... alcocode" />
-                <marker date="1493990887949" expanded="true" signature="5837:5968" ph="UPDATE alcoc... " />
-                <marker date="1493990887949" expanded="true" signature="6427:6568" ph="INSERT INTO alcocode... " />
-                <marker date="1493990887949" expanded="true" signature="7026:7040" ph="SELECT * FRO... qrcode" />
-                <marker date="1493990887949" expanded="true" signature="8068:8163" ph="INSERT INTO qrcode... " />
-                <marker date="1493990887949" expanded="true" signature="9342:9356" ph="SELECT * FRO... marks" />
-                <marker date="1493990887949" expanded="true" signature="9594:9608" ph="SELECT * FRO... qrcode" />
-                <marker date="1493990887949" expanded="true" signature="10729:10743" ph="SELECT * FRO... alcocode" />
-                <marker date="1493990887949" expanded="true" signature="11002:11016" ph="SELECT * FRO... marks" />
-                <marker date="1493990887949" expanded="true" signature="12536:12794" ph="INSERT INTO alcobase... " />
-                <marker date="1493990887949" expanded="true" signature="12536:12800" ph="INSERT INTO alcobase... " />
-                <marker date="1493990887949" expanded="true" signature="12536:12801" ph="INSERT INTO alcobase... " />
-                <marker date="1493990887949" expanded="true" signature="13791:13805" ph="SELECT * FRO... alcobase" />
+                <marker date="1494242460059" expanded="true" signature="1823:1837" ph="SELECT * FRO... alcocode" />
+                <marker date="1494242460059" expanded="true" signature="3361:3375" ph="SELECT * FRO... marks" />
+                <marker date="1494242460059" expanded="true" signature="4426:4525" ph="INSERT INTO marks... " />
+                <marker date="1494242460059" expanded="true" signature="4902:4916" ph="SELECT * FRO... alcocode" />
+                <marker date="1494242460059" expanded="true" signature="5576:5707" ph="UPDATE alcoc... " />
+                <marker date="1494242460059" expanded="true" signature="6166:6307" ph="INSERT INTO alcocode... " />
+                <marker date="1494242460059" expanded="true" signature="6765:6779" ph="SELECT * FRO... qrcode" />
+                <marker date="1494242460059" expanded="true" signature="7807:7902" ph="INSERT INTO qrcode... " />
+                <marker date="1494242460059" expanded="true" signature="9081:9095" ph="SELECT * FRO... marks" />
+                <marker date="1494242460059" expanded="true" signature="9333:9347" ph="SELECT * FRO... qrcode" />
+                <marker date="1494242460059" expanded="true" signature="10468:10482" ph="SELECT * FRO... alcocode" />
+                <marker date="1494242460059" expanded="true" signature="10741:10755" ph="SELECT * FRO... marks" />
+                <marker date="1494242460059" expanded="true" signature="12353:12611" ph="INSERT INTO alcobase... " />
+                <marker date="1494242460059" expanded="true" signature="12353:12617" ph="INSERT INTO alcobase... " />
+                <marker date="1494242460059" expanded="true" signature="12353:12618" ph="INSERT INTO alcobase... " />
+                <marker date="1494242460059" expanded="true" signature="13706:13720" ph="SELECT * FRO... alcobase" />
               </folding>
             </state>
           </provider>
@@ -156,8 +156,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/26e67e27-3eb1-48e5-a9d0-b697693d515d/console.sql" />
         <option value="$PROJECT_DIR$/src/sample/Data.java" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/database/UpdateAlcoDB.java" />
         <option value="$PROJECT_DIR$/src/sample/database/DBHelper.java" />
+        <option value="$PROJECT_DIR$/src/sample/database/UpdateAlcoDB.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/controller/Controller.java" />
       </list>
@@ -234,7 +234,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="decoder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlcoPC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlcoPC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlcoPC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlcoPC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -702,12 +738,12 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1493706281629" duration="67037000" />
+      <workItem from="1493706281629" duration="80260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68339000" />
+    <option name="totallyTimeSpent" value="81562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,9 +776,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17156863" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21732026" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902735" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21931261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19281046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39116204" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18844984" sideWeight="0.6703755" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -768,7 +804,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="70" />
+      <option name="time" value="74" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -783,6 +819,8 @@
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,30 +831,30 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
             <element signature="method#initData#0;class#Controller#0" expanded="false" />
             <element signature="method#todo#0;class#Controller#0" expanded="false" />
-            <element signature="class#2935:9030" expanded="false" />
             <element signature="method#showCounter#0;class#Controller#0" expanded="false" />
             <element signature="method#btnClear#0;class#Controller#0" expanded="false" />
             <element signature="method#btnSave#0;class#Controller#0" expanded="false" />
+            <element signature="method#btnUpdDB#0;class#Controller#0" expanded="false" />
             <element signature="method#onClickTable#0;class#Controller#0" expanded="false" />
-            <element signature="class#13090:15400" expanded="false" />
-            <marker date="1493990887949" expanded="true" signature="2084:2098" ph="SELECT * FRO... alcocode" />
-            <marker date="1493990887949" expanded="true" signature="3622:3636" ph="SELECT * FRO... marks" />
-            <marker date="1493990887949" expanded="true" signature="4687:4786" ph="INSERT INTO marks... " />
-            <marker date="1493990887949" expanded="true" signature="5163:5177" ph="SELECT * FRO... alcocode" />
-            <marker date="1493990887949" expanded="true" signature="5837:5968" ph="UPDATE alcoc... " />
-            <marker date="1493990887949" expanded="true" signature="6427:6568" ph="INSERT INTO alcocode... " />
-            <marker date="1493990887949" expanded="true" signature="7026:7040" ph="SELECT * FRO... qrcode" />
-            <marker date="1493990887949" expanded="true" signature="8068:8163" ph="INSERT INTO qrcode... " />
-            <marker date="1493990887949" expanded="true" signature="9342:9356" ph="SELECT * FRO... marks" />
-            <marker date="1493990887949" expanded="true" signature="9594:9608" ph="SELECT * FRO... qrcode" />
-            <marker date="1493990887949" expanded="true" signature="10729:10743" ph="SELECT * FRO... alcocode" />
-            <marker date="1493990887949" expanded="true" signature="11002:11016" ph="SELECT * FRO... marks" />
-            <marker date="1493990887949" expanded="true" signature="12536:12794" ph="INSERT INTO alcobase... " />
-            <marker date="1493990887949" expanded="true" signature="12536:12800" ph="INSERT INTO alcobase... " />
-            <marker date="1493990887949" expanded="true" signature="12536:12801" ph="INSERT INTO alcobase... " />
-            <marker date="1493990887949" expanded="true" signature="13791:13805" ph="SELECT * FRO... alcobase" />
+            <marker date="1494242460059" expanded="true" signature="1823:1837" ph="SELECT * FRO... alcocode" />
+            <marker date="1494242460059" expanded="true" signature="3361:3375" ph="SELECT * FRO... marks" />
+            <marker date="1494242460059" expanded="true" signature="4426:4525" ph="INSERT INTO marks... " />
+            <marker date="1494242460059" expanded="true" signature="4902:4916" ph="SELECT * FRO... alcocode" />
+            <marker date="1494242460059" expanded="true" signature="5576:5707" ph="UPDATE alcoc... " />
+            <marker date="1494242460059" expanded="true" signature="6166:6307" ph="INSERT INTO alcocode... " />
+            <marker date="1494242460059" expanded="true" signature="6765:6779" ph="SELECT * FRO... qrcode" />
+            <marker date="1494242460059" expanded="true" signature="7807:7902" ph="INSERT INTO qrcode... " />
+            <marker date="1494242460059" expanded="true" signature="9081:9095" ph="SELECT * FRO... marks" />
+            <marker date="1494242460059" expanded="true" signature="9333:9347" ph="SELECT * FRO... qrcode" />
+            <marker date="1494242460059" expanded="true" signature="10468:10482" ph="SELECT * FRO... alcocode" />
+            <marker date="1494242460059" expanded="true" signature="10741:10755" ph="SELECT * FRO... marks" />
+            <marker date="1494242460059" expanded="true" signature="12353:12611" ph="INSERT INTO alcobase... " />
+            <marker date="1494242460059" expanded="true" signature="12353:12617" ph="INSERT INTO alcobase... " />
+            <marker date="1494242460059" expanded="true" signature="12353:12618" ph="INSERT INTO alcobase... " />
+            <marker date="1494242460059" expanded="true" signature="13706:13720" ph="SELECT * FRO... alcobase" />
           </folding>
         </state>
       </provider>
@@ -879,14 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/decoder/PDF417decoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1022,29 +1052,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/InputStreamReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1031">
           <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/database/UpdateAlcoDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,9 +1092,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/util/Callback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/event/EventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/decoder/PDF417decoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/database/UpdateAlcoDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="309">
           <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding />
         </state>
@@ -1091,19 +1145,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/database/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="-770">
           <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="40" />
           <folding>
             <element signature="method#delete#0;class#DBHelper#0" expanded="false" />
@@ -1125,36 +1169,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="297" column="39" lean-forward="true" selection-start-line="297" selection-start-column="39" selection-end-line="297" selection-end-column="39" />
+        <state relative-caret-position="318">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
             <element signature="method#initData#0;class#Controller#0" expanded="false" />
             <element signature="method#todo#0;class#Controller#0" expanded="false" />
-            <element signature="class#2935:9030" expanded="false" />
             <element signature="method#showCounter#0;class#Controller#0" expanded="false" />
             <element signature="method#btnClear#0;class#Controller#0" expanded="false" />
             <element signature="method#btnSave#0;class#Controller#0" expanded="false" />
+            <element signature="method#btnUpdDB#0;class#Controller#0" expanded="false" />
             <element signature="method#onClickTable#0;class#Controller#0" expanded="false" />
-            <element signature="class#13090:15400" expanded="false" />
-            <marker date="1493990887949" expanded="true" signature="2084:2098" ph="SELECT * FRO... alcocode" />
-            <marker date="1493990887949" expanded="true" signature="3622:3636" ph="SELECT * FRO... marks" />
-            <marker date="1493990887949" expanded="true" signature="4687:4786" ph="INSERT INTO marks... " />
-            <marker date="1493990887949" expanded="true" signature="5163:5177" ph="SELECT * FRO... alcocode" />
-            <marker date="1493990887949" expanded="true" signature="5837:5968" ph="UPDATE alcoc... " />
-            <marker date="1493990887949" expanded="true" signature="6427:6568" ph="INSERT INTO alcocode... " />
-            <marker date="1493990887949" expanded="true" signature="7026:7040" ph="SELECT * FRO... qrcode" />
-            <marker date="1493990887949" expanded="true" signature="8068:8163" ph="INSERT INTO qrcode... " />
-            <marker date="1493990887949" expanded="true" signature="9342:9356" ph="SELECT * FRO... marks" />
-            <marker date="1493990887949" expanded="true" signature="9594:9608" ph="SELECT * FRO... qrcode" />
-            <marker date="1493990887949" expanded="true" signature="10729:10743" ph="SELECT * FRO... alcocode" />
-            <marker date="1493990887949" expanded="true" signature="11002:11016" ph="SELECT * FRO... marks" />
-            <marker date="1493990887949" expanded="true" signature="12536:12794" ph="INSERT INTO alcobase... " />
-            <marker date="1493990887949" expanded="true" signature="12536:12800" ph="INSERT INTO alcobase... " />
-            <marker date="1493990887949" expanded="true" signature="12536:12801" ph="INSERT INTO alcobase... " />
-            <marker date="1493990887949" expanded="true" signature="13791:13805" ph="SELECT * FRO... alcobase" />
+            <marker date="1494242460059" expanded="true" signature="1823:1837" ph="SELECT * FRO... alcocode" />
+            <marker date="1494242460059" expanded="true" signature="3361:3375" ph="SELECT * FRO... marks" />
+            <marker date="1494242460059" expanded="true" signature="4426:4525" ph="INSERT INTO marks... " />
+            <marker date="1494242460059" expanded="true" signature="4902:4916" ph="SELECT * FRO... alcocode" />
+            <marker date="1494242460059" expanded="true" signature="5576:5707" ph="UPDATE alcoc... " />
+            <marker date="1494242460059" expanded="true" signature="6166:6307" ph="INSERT INTO alcocode... " />
+            <marker date="1494242460059" expanded="true" signature="6765:6779" ph="SELECT * FRO... qrcode" />
+            <marker date="1494242460059" expanded="true" signature="7807:7902" ph="INSERT INTO qrcode... " />
+            <marker date="1494242460059" expanded="true" signature="9081:9095" ph="SELECT * FRO... marks" />
+            <marker date="1494242460059" expanded="true" signature="9333:9347" ph="SELECT * FRO... qrcode" />
+            <marker date="1494242460059" expanded="true" signature="10468:10482" ph="SELECT * FRO... alcocode" />
+            <marker date="1494242460059" expanded="true" signature="10741:10755" ph="SELECT * FRO... marks" />
+            <marker date="1494242460059" expanded="true" signature="12353:12611" ph="INSERT INTO alcobase... " />
+            <marker date="1494242460059" expanded="true" signature="12353:12617" ph="INSERT INTO alcobase... " />
+            <marker date="1494242460059" expanded="true" signature="12353:12618" ph="INSERT INTO alcobase... " />
+            <marker date="1494242460059" expanded="true" signature="13706:13720" ph="SELECT * FRO... alcobase" />
           </folding>
         </state>
       </provider>
